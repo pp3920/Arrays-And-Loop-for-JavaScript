@@ -115,6 +115,7 @@ function calculateTotalCostDiscount(price, quantity, taxRates, discount) {
 // /*    Test Cases */
 // //let result_with_discount = calculateTotalCost("dd"," ","aa");              /* test case for invalid input */
 let result_with_discount = calculateTotalCostDiscount(10, 2, 2, 1);              /*test case for valdi input*/
+//let result_with_discount = calculateTotalCostDiscount(10, 2, 2, 0);              //when discount does not exsisst
 console.log("result after disc " + result_with_discount);                        /* print the result of the program */
 
 
