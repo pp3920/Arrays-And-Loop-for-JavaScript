@@ -22,7 +22,7 @@ function formatFullName(first_Name, Last_Name) {
 /* Test  Case -----uncomment these lines to test the scenerio-----*/
 
 // let result = formatFullName("priyanka", "pandey");                //valid case
-// let result2 = formatFullName(" ", "pandey"); //                  //invalid case
+// let result = formatFullName(" ", "pandey"); //                  //invalid case
 // console.log(result);                                              //print result of the program
 
 
@@ -42,15 +42,17 @@ function calculateTotalCost(price, quantity, taxRates) {
     if (typeof price !== "number" || typeof quantity !== "number" || typeof taxRates !== "number") {
         console.log("Invalid Input");
     }
+    else {
 
-    totalCost = (price * quantity) * (1 + taxRates)
-    return totalCost;
+        totalCost = (price * quantity) * (1 + taxRates)
+        return totalCost.toFixed(2);
+    }
 }
 
 /*    Test Cases */
-//let result = calculateTotalCost("dd"," ","aa");      /* test case for invalid input */
-let result = calculateTotalCost(10, 2, 2);            /*test case for valdi input*/
-console.log( "result after total cost " +    result);                                  /* print the result of the program */
+let result2 = calculateTotalCost("dd", " ", "aa");      /* test case for invalid input */
+/*let result = calculateTotalCost(10, 2, 2);            /*test case for valdi input*/
+//console.log("result after total cost " + result);         //print the result of the program */
 
 
 
@@ -107,16 +109,18 @@ function calculateTotalCostDiscount(price, quantity, taxRates, discount) {
     if (typeof price !== "number" || typeof quantity !== "number" || typeof taxRates !== "number" || typeof discount !== "number") {
         console.log("Invalid Input");
     }
+    else {
 
-    TCost = (((price * quantity) * (1 + taxRates)) - discount);
-    return TCost;
+        TCost = (((price * quantity) * (1 + taxRates)) - discount);
+        return TCost.toFixed(2);
+    }
 }
 
 // /*    Test Cases */
 // //let result_with_discount = calculateTotalCost("dd"," ","aa");              /* test case for invalid input */
-let result_with_discount = calculateTotalCostDiscount(10, 2, 2, 1);              /*test case for valdi input*/
+let result_with_discount = calculateTotalCostDiscount(10.3, 2, 2, 1);              /*test case for valdi input*/
 //let result_with_discount = calculateTotalCostDiscount(10, 2, 2, 0);              //when discount does not exsisst
-console.log("result after disc " + result_with_discount);                        /* print the result of the program */
+//console.log("result after disc " + result_with_discount);                        /* print the result of the program */
 
 
 

@@ -1,2 +1,2 @@
-github link for the 2nd Activity:
+This project is based in understanding of Arrays and Loops
 
